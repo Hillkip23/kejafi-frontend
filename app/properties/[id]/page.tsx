@@ -1,5 +1,10 @@
 ﻿import Link from "next/link";
-export default async function PropertyPage({ params }) {
+
+interface Props {
+  params: Promise<{ id: string }>;
+}
+
+export default async function PropertyPage({ params }: Props) {
   const { id } = await params;
   return (
     <div>
