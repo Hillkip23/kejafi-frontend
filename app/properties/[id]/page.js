@@ -1,13 +1,9 @@
 ﻿import Link from "next/link";
 
-interface Props {
-  params: Promise<{ id: string }>;
-}
-
-export default async function PropertyPage({ params }: Props) {
+export default async function PropertyPage({ params }) {
   const { id } = await params;
   return (
-    <div>
+    <div style={{ padding: 20 }}>
       <h1>Property: {id}</h1>
       <Link href={`/properties/${id}/checkout`}>Buy Tokens</Link>
     </div>
